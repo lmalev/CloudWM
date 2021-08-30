@@ -1,0 +1,6 @@
+---
+- name: Update ({{ ansible_facts['distribution'] }} - {{ ansible_facts['distribution_major_version'] }})
+  yum:
+    name: '*'
+    update_cache: yes
+    state: latest

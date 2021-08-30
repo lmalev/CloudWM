@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  connection: local
+  tasks:
+    - name: Ubuntu/Debian flaivor
+      include_tasks: ubuntu.yml
+      when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+    - name: RedHat flaivor
+      include_tasks: redhat.yml
+      when: ansible_os_family == "RedHat"

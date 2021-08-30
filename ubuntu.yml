@@ -1,0 +1,5 @@
+---
+- name: Update ({{ ansible_facts['distribution'] }} - {{ ansible_facts['distribution_release'] }})
+  apt:
+    upgrade: 'yes'
+    update_cache: yes
